@@ -11,6 +11,7 @@ load 'config/recipes/foreman'
 
 set :stages, %w(production staging)
 set :default_stage, 'staging'
+set(:rails_env) { fetch(:stage) }
 
 set :shared_children, shared_children + %w(public/uploads public/assets)
 
