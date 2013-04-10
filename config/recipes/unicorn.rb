@@ -1,5 +1,3 @@
-set_default :unicorn_workers, 2
-
 namespace :unicorn do
 
   desc 'Generate the unicorn.rb configuration file.'
