@@ -6,6 +6,8 @@ load 'config/recipes/libs'
 load 'config/recipes/nginx'
 load 'config/recipes/postgresql'
 load 'config/recipes/rbenv'
+load 'config/recipes/unicorn'
+load 'config/recipes/foreman'
 
 set :stages, %w(production staging)
 set :default_stage, 'staging'
