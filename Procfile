@@ -1,1 +1,1 @@
-web: bundle exec unicorn -E $RAILS_ENV -c config/unicorn.rb
+web: bundle exec unicorn -E staging -c config/unicorn.rb

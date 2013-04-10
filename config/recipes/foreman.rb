@@ -21,7 +21,6 @@ namespace :foreman do
 
   desc 'Restart the application services'
   task :restart, roles: :app do
-    run "#{sudo} restart #{application}"
     run "#{sudo} start #{application}_#{stage} || #{sudo} restart #{application}_#{stage}"
   end
   after 'deploy:restart', 'foreman:restart'
