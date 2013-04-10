@@ -4,7 +4,7 @@ namespace :foreman do
     run "cd #{current_path}; bundle exec foreman export upstart /tmp/upstart -a #{application}_#{stage} -u #{user} -l #{shared_path}/log"
     run "#{sudo} cp /tmp/upstart/* /etc/init"
   end
-  # after 'deploy:setup', 'foreman:setup'
+  # after 'deploy:cold', 'foreman:setup'
   after 'deploy:update', 'foreman:setup'
 
   desc 'Start the application services'
